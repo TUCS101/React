@@ -1,16 +1,20 @@
-import React from 'react';
-function msg()
-{
-  alert("Message to the java developer");
-  console.log("hi");
-}
-function cw1() {
-  return (
-    <div className="App">
-    <button onClick={msg}>CW1</button>
-    <br></br>
-    </div>
-  );
+//In Inline.jsx
+import React from "react";
+function Inline(){
+    return(
+        <div style={{backgroundColor:'lightblue',padding:'10px',border:'1px solid blue',borderRadius:'5px'}}>
+        <h1 style={{color:'green'}}>Inline Style in JSX example</h1>
+        <p style={{color:'darkblue',fontSize:'16px'}}>This is a paragraph with inline styles applied.</p>
+        </div>
+    );
 };
-
-export default cw1;
+export default Inline;
+//In App.js
+import React from "react";
+import Inline from "./component/Inline";
+function App(){
+  return(
+     <Inline/>
+  )
+}
+export default App;
